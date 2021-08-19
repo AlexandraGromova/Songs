@@ -3,7 +3,7 @@ package com.example.songs
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 
-class APIEmulator() {
+class APIEmulator(){
     val str = """
        {
     "itemListElement": [
@@ -24,13 +24,13 @@ class APIEmulator() {
         }
     ]
 }""".trimIndent()
+    val listOfSongs by lazy { getSongList() }
 
-    fun getListOfSongs(str: String) : List<Song>{
+    private fun getSongList():List<Song> {
         val gsonBuilder = GsonBuilder()
         val gson: Gson = gsonBuilder.create()
-        val song: Song = gson.fromJson(str, Song::class.java)
-        val listSongs: List<Song> = listOf(song)
-        return listSongs
+        val listSongs: SongResult = gson.fromJson(str, SongResult::class.java)
+        return listSongs.itemListElement
     }
 
 }
