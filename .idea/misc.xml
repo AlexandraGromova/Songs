@@ -5,6 +5,8 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_songs_list.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/song_item.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/songs_fragment.xml" value="0.21" />
       </map>
     </option>
   </component>
